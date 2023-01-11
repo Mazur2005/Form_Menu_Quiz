@@ -1,0 +1,14 @@
+@import "./media_queries_menuHTML/pc_screen.css";
+@import "./media_queries_menuHTML/phone_screen.css";
+@import "./media_queries_menuHTML/tablet_screen.css";
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100%;
+	background: linear-gradient(rgb(0, 0, 3), rgb(255, 192, 203));
+	background-size: cover;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}

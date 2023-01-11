@@ -1,0 +1,107 @@
+@media (min-width: 540px) and (max-width: 768px) {
+	.container-body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.data {
+		text-align: center;
+		font-size: 40px;
+		line-height: 15px;
+		margin-left: 20px;
+		margin-bottom: 20%;
+	}
+	.currentDayName {
+		font-size: 50px;
+	}
+
+	.body-app {
+		width: 70%;
+		margin: 5px;
+	}
+
+	.header-app {
+		text-align: center;
+		color: rgb(224, 144, 144);
+		font-size: 30px;
+	}
+	.city-information {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		justify-content: space-around;
+		color: rgb(231, 215, 215);
+		font-size: 25px;
+	}
+
+	.body-information-about-weather {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		justify-content: space-around;
+		margin-top: 5px;
+		font-size: 20px;
+	}
+	.container-welcome-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.container-welcome-text h1 {
+		font-size: 70px;
+		margin-bottom: 0;
+	}
+	.container-welcome-text h2 {
+		font-size: 50px;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+
+	.rules {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		line-height: 50px;
+		font-size: 30px;
+	}
+	.all-quiz {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
+	.quiz-JS,
+	.quiz-HTML,
+	.quiz-CSS {
+		text-align: center;
+	}
+
+	.all-quiz p {
+		letter-spacing: 2px;
+		font-weight: bold;
+		margin: 15px 0px 15px 0px;
+		font-size: 40px;
+	}
+
+	.quiz-JS a,
+	.quiz-HTML a,
+	.quiz-CSS a {
+		color: #000000;
+		text-decoration: none;
+		outline: none;
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:focus {
+		color: #2d3133;
+	}
+}

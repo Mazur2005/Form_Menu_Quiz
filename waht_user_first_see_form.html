@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style_form.css" />
+  <script src="https://kit.fontawesome.com/3b117eb5e6.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/3b117eb5e6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="centered-form">
+    <form>
+
+      <div class="header">
+        <h1>Hello🐱‍💻</h1>
+        <h2>Before you start the quiz complete the short form</h2>
+      </div>
+
+      <div class="form-box">
+        <label for="username">Nick Name</label>
+        <input type="text" spellcheck="false" id="username" placeholder="Write nick" class="style-input-information" />
+        <i class="fa-solid fa-check icon-user-name-correct"></i>
+        <i class="fa-solid fa-x icon-user-name-incorrect"></i>
+        <p class="error-name error-text">a</p>
+      </div>
+
+      <div class="form-box">
+        <label for="password">Password</label>
+        <input type="password" spellcheck="false" id="password" placeholder="Write password"
+          class="style-input-information" />
+        <i class="fa-solid fa-check icon-password-correct"></i>
+        <i class="fa-solid fa-x icon-password-incorrect"></i>
+        <p class="error-password error-text">a</p>
+      </div>
+
+      <div class="form-box">
+        <label for="password2">Repeat password</label>
+        <input type="password" spellcheck="false" id="password2" placeholder="Repeat password"
+          class="style-input-information" />
+        <i class="fa-solid fa-check icon-password2-correct"></i>
+        <i class="fa-solid fa-x icon-password2-incorrect"></i>
+        <p class="error-password2 error-text">a</p>
+      </div>
+
+      <div class="form-box problem-with-server-or-code">
+        <label for="city">Write your city</label>
+        <input type="text" spellcheck="false" id="city" placeholder="Write your city" class="style-input-information" />
+        <i class="fa-solid fa-check icon-city-correct"></i>
+        <i class="fa-solid fa-x icon-city-incorrect"></i>
+        <p class="error-city error-text">a</p>
+      </div>
+
+      <div class="form-box">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Write email" class="style-input-information" />
+        <i class="fa-solid fa-check icon-email-correct"></i>
+        <i class="fa-solid fa-x icon-email-incorrect"></i>
+        <p class="error-email error-text">a</p>
+      </div>
+
+      <div class="control-button">
+        <input type="submit" value="Clear form" class="clear-form-btn">
+        <input type="submit" value="Go next" class="go-next-btn">
+      </div>
+
+    </form>
+
+    <div class="end-form">
+      <div class="end-form-text">
+        <p></p>
+      </div>
+      <p>click button and go to quiz</p>
+      <a href="./menu_after_form/menu.html"><button type="button" class="closeBtn">Close</button></a>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script type="module" src="form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@import "./media_queries_quizHTML/pc_screen.css";
+@import "./media_queries_quizHTML/phone_screen.css";
+@import "./media_queries_quizHTML/tablet_screen.css";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.704), rgb(255, 192, 203));
+	height: 100%;
+}
+
