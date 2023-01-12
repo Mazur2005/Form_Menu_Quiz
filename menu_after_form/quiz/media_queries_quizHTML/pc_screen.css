@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+
 	.panel-before-quiz {
 		display: flex;
 		justify-content: center;
@@ -136,4 +136,3 @@
 	.last-optionBtn:focus {
 		background-color: rgba(216, 154, 194, 0.77);
 	}
-}

@@ -4,14 +4,13 @@ const clock = document.querySelector(".clock");
 
 const showDay = () => {
 	let today = new Date();
-	// let options = { weekday: "long" };
+	
 	let day = today.toLocaleString("en", { weekday: "long" });
 	let dd = String(today.getDate()).padStart(2, "0");
 	let mm = String(today.getMonth() + 1).padStart(2, "0");
-
 	let yyyy = today.getFullYear();
-	today = day;
-	currentDayName.textContent = today;
+
+	currentDayName.textContent = day;
 	currentDay.textContent = dd + "/" + mm + "/" + yyyy;
 };
 

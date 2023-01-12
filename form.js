@@ -23,49 +23,70 @@ const clearFormBtn = document.querySelector(".clear-form-btn");
 const theMinimumNumberOfCharactersInTheNickname = 2;
 const theMinimumNumberOfCharactersInThePassword = 8;
 
-const nameSyntax = {
-	valueInput: document.querySelector("#username"),
-	errorName: document.querySelector(".error-name"),
-	iconCheck: document.querySelector(".icon-user-name-correct"),
-	iconX: document.querySelector(".icon-user-name-incorrect"),
-	InputIsCorrect: false,
-};
-const passwordSyntax = {
-	valueInput: document.querySelector("#password"),
-	errorName: document.querySelector(".error-password"),
-	iconCheck: document.querySelector(".icon-password-correct"),
-	iconX: document.querySelector(".icon-password-incorrect"),
-	InputIsCorrect: false,
+const inputName = "name";
+const inputPassword = "password";
+const inputComparingPassword = "comparingPassword";
+const inputCity = "city";
+const inputEmail = "email";
+
+const nameSyntax = {};
+const passwordSyntax = {};
+const comparingPasswordSyntax = {};
+const citySyntax = {};
+const emailSyntax = {};
+
+const createSyntax = (whatSyntax, id, error, iconCheck, iconX) => {
+	whatSyntax.valueInput = document.querySelector(id);
+	whatSyntax.errorName = document.querySelector(error);
+	whatSyntax.iconCheck = document.querySelector(iconCheck);
+	whatSyntax.iconX = document.querySelector(iconX);
+	whatSyntax.InputIsCorrect = false;
 };
 
-const ComparingPasswordsSyntax = {
-	valueInput: document.querySelector("#password2"),
-	errorName: document.querySelector(".error-password2"),
-	iconCheck: document.querySelector(".icon-password2-correct"),
-	iconX: document.querySelector(".icon-password2-incorrect"),
-	InputIsCorrect: false,
-};
+createSyntax(
+	nameSyntax,
+	"#username",
+	".error-name",
+	".icon-user-name-correct",
+	".icon-user-name-incorrect"
+);
 
-const citySyntax = {
-	valueInput: document.querySelector("#city"),
-	errorName: document.querySelector(".error-city"),
-	iconCheck: document.querySelector(".icon-city-correct"),
-	iconX: document.querySelector(".icon-city-incorrect"),
-	InputIsCorrect: false,
-};
+createSyntax(
+	passwordSyntax,
+	"#password",
+	".error-password",
+	".icon-password-correct",
+	".icon-password-incorrect"
+);
 
-const emailSyntax = {
-	valueInput: document.querySelector("#email"),
-	errorName: document.querySelector(".error-email"),
-	iconCheck: document.querySelector(".icon-email-correct"),
-	iconX: document.querySelector(".icon-email-incorrect"),
-	InputIsCorrect: false,
-};
+createSyntax(
+	comparingPasswordSyntax,
+	"#password2",
+	".error-password2",
+	".icon-password2-correct",
+	".icon-password2-incorrect"
+);
+
+createSyntax(
+	citySyntax,
+	"#city",
+	".error-city",
+	".icon-city-correct",
+	".icon-city-incorrect"
+);
+
+createSyntax(
+	emailSyntax,
+	"#email",
+	".error-email",
+	".icon-email-correct",
+	".icon-email-incorrect"
+);
 
 const allError = [
 	nameSyntax.errorName,
 	passwordSyntax.errorName,
-	ComparingPasswordsSyntax.errorName,
+	comparingPasswordSyntax.errorName,
 	citySyntax.errorName,
 	emailSyntax.errorName,
 ];
@@ -90,23 +111,23 @@ const everyError = (syntax, error) => {
 
 const sendGoodPath = whatKindOfInput => {
 	switch (whatKindOfInput) {
-		case "name":
+		case inputName:
 			everyGoodPath(nameSyntax);
 			break;
 
-		case "password":
+		case inputPassword:
 			everyGoodPath(passwordSyntax);
 			break;
 
-		case "ComparingPasswords":
-			everyGoodPath(ComparingPasswordsSyntax);
+		case inputComparingPassword:
+			everyGoodPath(comparingPasswordSyntax);
 			break;
 
-		case "city":
+		case inputCity:
 			everyGoodPath(citySyntax);
 			break;
 
-		case "email":
+		case inputEmail:
 			everyGoodPath(emailSyntax);
 			break;
 	}
@@ -114,23 +135,23 @@ const sendGoodPath = whatKindOfInput => {
 
 const sendError = (whatKindOfInput, error) => {
 	switch (whatKindOfInput) {
-		case "name":
+		case inputName:
 			everyError(nameSyntax, error);
 			break;
 
-		case "password":
+		case inputPassword:
 			everyError(passwordSyntax, error);
 			break;
 
-		case "ComparingPasswords":
-			everyError(ComparingPasswordsSyntax, error);
+		case inputComparingPassword:
+			everyError(comparingPasswordSyntax, error);
 			break;
 
-		case "city":
+		case inputCity:
 			everyError(citySyntax, error);
 			break;
 
-		case "email":
+		case inputEmail:
 			everyError(emailSyntax, error);
 			break;
 	}
@@ -142,15 +163,15 @@ const checkUserName = () => {
 			nameSyntax.valueInput.value.length >
 			theMinimumNumberOfCharactersInTheNickname
 		) {
-			sendGoodPath("name");
+			sendGoodPath(inputName);
 		} else {
 			sendError(
-				"name",
+				inputName,
 				everyErrorText.THE_NAME_MUST_CONTAIN_AT_LEAST_3_LETTERS
 			);
 		}
 	} else {
-		sendError("name", everyErrorText.FORBIDDEN_SPECIAL_CHARACTERS);
+		sendError(inputName, everyErrorText.FORBIDDEN_SPECIAL_CHARACTERS);
 	}
 };
 
@@ -163,26 +184,26 @@ const checkPassword = () => {
 			RegEx.CHECKING_SPECIAL_CHARACTER.test(passwordSyntax.valueInput.value)
 		) {
 			if (RegEx.CHECKING_NUMBER.test(passwordSyntax.valueInput.value)) {
-				sendGoodPath("password");
+				sendGoodPath(inputPassword);
 			} else {
-				sendError("password", everyErrorText.ENTER_THE_NUMBER);
+				sendError(inputPassword, everyErrorText.ENTER_THE_NUMBER);
 			}
 		} else {
-			sendError("password", everyErrorText.SPECIAL_CHARACTERS);
+			sendError(inputPassword, everyErrorText.SPECIAL_CHARACTERS);
 		}
 	} else {
-		sendError("password", everyErrorText.PASSWORD_IS_TOO_SHORT);
+		sendError(inputPassword, everyErrorText.PASSWORD_IS_TOO_SHORT);
 	}
 };
 
-const checkComparingPasswords = () => {
+const checkComparingPassword = () => {
 	if (
-		ComparingPasswordsSyntax.valueInput.value === password.value &&
-		ComparingPasswordsSyntax.valueInput.value.length > 0
+		comparingPasswordSyntax.valueInput.value === password.value &&
+		comparingPasswordSyntax.valueInput.value.length > 0
 	) {
-		sendGoodPath("ComparingPasswords");
+		sendGoodPath(inputComparingPassword);
 	} else {
-		sendError("ComparingPasswords", everyErrorText.PASSWORD_ARE_NOT_THE_SAME);
+		sendError(inputComparingPassword, everyErrorText.PASSWORD_ARE_NOT_THE_SAME);
 	}
 };
 
@@ -196,7 +217,7 @@ const checkCity = () => {
 		.get(URL)
 		.then(res => {
 			setCity(res.data.name);
-			sendGoodPath("city");
+			sendGoodPath(inputCity);
 			localStorage.setItem("problemWithCodeOrServer", false);
 		})
 		.catch(res => {
@@ -204,7 +225,7 @@ const checkCity = () => {
 				res.response.status === APIerrors.BAD_REQUEST ||
 				res.response.status === APIerrors.NOT_FOUND
 			) {
-				return sendError("city", everyErrorText.INCORRECT_CITY_NAME);
+				return sendError(inputCity, everyErrorText.INCORRECT_CITY_NAME);
 			}
 		})
 		.catch(() => {
@@ -215,25 +236,29 @@ const checkCity = () => {
 		});
 };
 
-const UpperCaseFirstLetter = word => {
+const upperCaseFirstLetter = word => {
 	return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
+const sendNickName = () => {
+	const nickName = upperCaseFirstLetter(nameSyntax.valueInput.value);
+	endFormText.innerHTML = `Hello <b>${nickName}</b>, thanks for short form`;
+	setNick(nickName);
+};
+
+const setNick = nickName => {
+	localStorage.setItem("nickName", `Hello ${nickName}`);
 };
 
 const setCity = city => {
 	localStorage.setItem("city", city);
 };
 
-const setNickName = () => {
-	const nickName = UpperCaseFirstLetter(nameSyntax.valueInput.value);
-	localStorage.setItem("nickName", `Hello ${nickName}`);
-	endFormText.innerHTML = `Hello <b>${nickName}</b>, thanks for short form`;
-};
-
 const checkEmail = () => {
 	if (RegEx.CHECKING_EMAIL.test(emailSyntax.valueInput.value)) {
-		sendGoodPath("email");
+		sendGoodPath(inputEmail);
 	} else {
-		sendError("email", everyErrorText.INVALID_EMAIL);
+		sendError(inputEmail, everyErrorText.INVALID_EMAIL);
 	}
 };
 
@@ -241,7 +266,7 @@ const allInputIsCorrect = () => {
 	if (
 		nameSyntax.InputIsCorrect &&
 		passwordSyntax.InputIsCorrect &&
-		ComparingPasswordsSyntax.InputIsCorrect &&
+		comparingPasswordSyntax.InputIsCorrect &&
 		citySyntax.InputIsCorrect &&
 		emailSyntax.InputIsCorrect
 	) {
@@ -249,7 +274,7 @@ const allInputIsCorrect = () => {
 		controlButton.style.opacity = -1;
 		form.style.display = "none";
 		endForm.style.visibility = "visible";
-		setNickName();
+		sendNickName();
 	}
 };
 
@@ -270,27 +295,26 @@ const animationGoNextBtn = () => {
 	}, 500);
 };
 
-clearFormBtn.addEventListener("click", clearError);
-
-goNextBtn.addEventListener("click", e => {
+const checkFunctions = e => {
 	e.preventDefault();
 	checkUserName();
 	checkPassword();
-	checkComparingPasswords();
+	checkComparingPassword();
 	checkCity();
 	checkEmail();
+};
+
+clearFormBtn.addEventListener("click", clearError);
+
+goNextBtn.addEventListener("click", e => {
+	checkFunctions(e);
 });
 
 styleInputInformation.forEach(input =>
 	input.addEventListener("keypress", e => {
 		if (e.key === "Enter") {
-			e.preventDefault();
+			checkFunctions(e);
 			animationGoNextBtn();
-			checkUserName();
-			checkPassword();
-			checkComparingPasswords();
-			checkCity();
-			checkEmail();
 		}
 	})
 );
