@@ -65,15 +65,21 @@
 	font-size: 40px;
 }
 
-a {
-	color: #000000;
-	text-decoration: none;
+.quiz-JS button,
+.quiz-HTML button,
+.quiz-CSS button {
+	background-color: inherit;
+	border: none;
 	outline: none;
 	cursor: pointer;
-	text-decoration: none;
+	transition: 0.5s;
 }
 
-a:hover,
-a:focus {
-	color: #2d3133;
+.quiz-JS button:hover,
+.quiz-HTML button:hover,
+.quiz-CSS button:hover,
+.quiz-JS button:focus,
+.quiz-HTML button:focus,
+.quiz-CSS button:focus {
+	color: #646a6d;
 }
