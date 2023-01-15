@@ -1,4 +1,4 @@
-import { APIweather } from "../fetch_API_Weather.js";
+import { APIweather } from "../../Form/JavaScript/fetch_API_Weather";
 import { changePositionDate } from "./change_ position_date.js";
 
 const bodyApp = document.querySelector(".body-app");
@@ -84,3 +84,5 @@ const checkingAPIerror = () => {
 };
 
 checkingAPIerror();
+
+export * from './weather_api.js'

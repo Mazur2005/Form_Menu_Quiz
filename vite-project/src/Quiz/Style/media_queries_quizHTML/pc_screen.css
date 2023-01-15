@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.704), rgb(255, 192, 203));
+	height: 100%;
+}
+
 .panel-before-quiz {
 	display: flex;
 	justify-content: center;
@@ -41,10 +54,15 @@
 }
 .header {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	margin-top: 5px;
 	font-size: 60px;
+}
+.header .score,
+.header .time {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 .question {
 	text-align: center;
@@ -61,6 +79,7 @@
 	margin: 10px;
 	font-size: 30px;
 	padding: 10px;
+	cursor: pointer;
 }
 .all-answers,
 .q {

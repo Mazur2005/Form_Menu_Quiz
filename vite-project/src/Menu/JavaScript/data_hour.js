@@ -4,7 +4,7 @@ const clock = document.querySelector(".clock");
 
 const showDay = () => {
 	let today = new Date();
-	
+
 	let day = today.toLocaleString("en", { weekday: "long" });
 	let dd = String(today.getDate()).padStart(2, "0");
 	let mm = String(today.getMonth() + 1).padStart(2, "0");
@@ -34,3 +34,5 @@ function checkTime(i) {
 
 document.addEventListener("DOMContentLoaded", startTime);
 document.addEventListener("DOMContentLoaded", showDay);
+
+export * from "./data_hour.js";

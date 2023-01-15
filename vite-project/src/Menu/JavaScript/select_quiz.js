@@ -1,12 +1,12 @@
+import { objectQuestionsHtml } from "./question_quiz/question_HTML.js";
+import { objectQuestionsCss } from "./question_quiz/questions_CSS.js";
+import { objectQuestionsJs } from "./question_quiz/question_JS.js";
+
 const quizHtml = document.querySelector(".quiz-HTML a");
 const quizCss = document.querySelector(".quiz-CSS a");
 const quizJs = document.querySelector(".quiz-JS a");
 
 let value = localStorage.getItem("value");
-
-import { objectQuestionsHtml } from "./question_quiz/question_HTML.js";
-import { objectQuestionsCss } from "./question_quiz/questions_CSS.js";
-import { objectQuestionsJs } from "./question_quiz/question_JS.js";
 
 export const selectQuestion = () => {
 	if (value === "HTML") {
@@ -20,7 +20,7 @@ export const selectQuestion = () => {
 
 const selectQuiz = (quizName, whatKindOfQuiz) => {
 	localStorage.setItem("value", quizName);
-	whatKindOfQuiz.setAttribute("href", "/menu_after_form/quiz/quiz.html");
+	whatKindOfQuiz.setAttribute("href", "../Quiz/quiz.html");
 	selectQuestion();
 };
 
@@ -35,3 +35,5 @@ quizCss?.addEventListener("click", () => {
 quizJs?.addEventListener("click", () => {
 	selectQuiz("JS", quizJs);
 });
+
+export * from "./select_quiz.js";

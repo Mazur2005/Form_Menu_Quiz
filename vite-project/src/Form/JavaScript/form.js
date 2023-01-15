@@ -318,3 +318,5 @@ styleInputInformation.forEach(input =>
 		}
 	})
 );
+
+export * from "./form.js";

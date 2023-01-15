@@ -1,3 +1,16 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.704), rgb(255, 192, 203));
+	height: 100%;
+}
+
 .panel-before-quiz {
 	display: flex;
 	justify-content: center;
@@ -7,7 +20,7 @@
 }
 
 .start {
-	font-size: 40px;
+	font-size: 80px;
 	font-weight: bold;
 	padding: 50px;
 	border-radius: 10px;
@@ -24,7 +37,7 @@
 	background-color: rgba(98, 57, 96, 0.646);
 }
 .instruction {
-	font-size: 40px;
+	font-size: 80px;
 }
 
 .hidden-before-click-start {
@@ -44,12 +57,12 @@
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 5px;
-	font-size: 40px;
+	font-size: 60px;
 }
 .question {
 	text-align: center;
-	font-size: 40px;
-	margin-top: 10px;
+	font-size: 50px;
+	margin: 50px 20px;
 }
 .all-answers {
 	margin: 20px;
@@ -59,7 +72,7 @@
 .all-answers button {
 	flex-wrap: wrap;
 	margin: 10px;
-	font-size: 15px;
+	font-size: 30px;
 	padding: 10px;
 }
 .all-answers,
@@ -78,7 +91,7 @@
 }
 .next-btn {
 	margin: 10px;
-	padding: 10px;
+	padding: 20px;
 	border-radius: 20px;
 	border: none;
 	background-color: rgba(0, 0, 0, 0.236);
@@ -87,7 +100,7 @@
 	outline: none;
 }
 .next-btn p {
-	font-size: 20px;
+	font-size: 30px;
 }
 .next-btn:hover,
 .next-btn:focus {
@@ -102,7 +115,7 @@
 }
 
 .final-score {
-	font-size: 40px;
+	font-size: 80px;
 	color: rgb(251, 251, 250);
 	margin-bottom: 20px;
 }
@@ -115,17 +128,17 @@
 
 .last-optionBtn {
 	background-color: rgba(0, 0, 0, 0.236);
-	padding: 20px 60px;
+	padding: 40px 120px;
 	cursor: pointer;
 	border: none;
 	outline: none;
 	transition: background-color 1s;
 	border-radius: 5px;
-	font-size: 20px;
+	font-size: 40px;
 	margin: 5px;
 }
 
 .last-optionBtn:hover,
 .last-optionBtn:focus {
-	background-color: rgba(216, 154, 194, 0.775);
+	background-color: rgba(216, 154, 194, 0.77);
 }
