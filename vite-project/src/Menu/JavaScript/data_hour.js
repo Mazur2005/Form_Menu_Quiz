@@ -1,5 +1,5 @@
-const currentDayName = document.querySelector(".currentDayName");
-const currentDay = document.querySelector(".currentDay");
+const currentDayName = document.querySelector(".current-day-name");
+const currentDay = document.querySelector(".current-day");
 const clock = document.querySelector(".clock");
 
 const showDay = () => {
@@ -31,8 +31,7 @@ function checkTime(i) {
 	}
 	return i;
 }
-
-document.addEventListener("DOMContentLoaded", startTime);
-document.addEventListener("DOMContentLoaded", showDay);
+startTime()
+showDay()
 
 export * from "./data_hour.js";

@@ -1,3 +1,4 @@
-@import "./media_queries_quizHTML/phone_screen.css" (min-width: 320px) and (max-width: 540px);
-@import "./media_queries_quizHTML/tablet_screen.css" (min-width: 540px) and (max-width: 768px);
-@import "./media_queries_quizHTML/pc_screen.css" (min-width: 768px);
+@import "./version/mobile_version.css" (min-width: 320px) and (max-width: 540px);
+@import "./version/tablet_version.css" (min-width: 540px) and
+	(max-width: 1100px);
+@import "./version/pc_version.css" (min-width: 1100px);

@@ -1,0 +1,5 @@
+body {
+	background: var(--backGround-page-part1);
+	background: var(--backGround-page-part2);
+	font-family: var(--main-font);
+}

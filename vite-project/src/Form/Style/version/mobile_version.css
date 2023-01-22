@@ -1,0 +1,6 @@
+@import url(../../../style_roots/reset.css);
+@import url(../../../style_roots/root.css);
+@import url(./body_style.css);
+@import url(./mobile_version/header_mobile_version.css);
+@import url(./mobile_version/form_mobile_version.css);
+@import url(../underline_error.css);

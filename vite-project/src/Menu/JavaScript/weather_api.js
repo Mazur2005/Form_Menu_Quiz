@@ -1,7 +1,6 @@
 import { APIweather } from "../../Form/JavaScript/fetch_API_Weather";
-import { changePositionDate } from "./change_ position_date.js";
 
-const bodyApp = document.querySelector(".body-app");
+const bodyAPI = document.querySelector(".body-API");
 const cityPlace = document.querySelector(".city-information h2 ");
 const temperature = document.querySelector(".information-temperature h3");
 const pressure = document.querySelector(".information-pressure h3");
@@ -13,8 +12,7 @@ let problemWithCodeOrServer = localStorage.getItem("problemWithCodeOrServer");
 
 const checkingAPIerror = () => {
 	if (problemWithCodeOrServer === "true") {
-		bodyApp.style.display = "none";
-		changePositionDate.changePosition();
+		bodyAPI.style.display = "none";
 	} else {
 		const changeIcon = status => {
 			const icon = {
@@ -32,31 +30,31 @@ const checkingAPIerror = () => {
 			};
 
 			if (icon.cloudSun) {
-				sendClassName("fa-solid fa-cloud-sun fa-8x");
+				return sendClassName("fa-solid fa-cloud-sun fa-8x");
 			}
 
 			if (icon.sun) {
-				sendClassName("fa-solid fa-sun fa-8x");
+				return sendClassName("fa-solid fa-sun fa-8x");
 			}
 
 			if (icon.barsStaggered) {
-				sendClassName("fa-solid fa-bars-staggered fa-8x");
+				return sendClassName("fa-solid fa-bars-staggered fa-8x");
 			}
 
 			if (icon.snowFlake) {
-				sendClassName("fa-solid fa-snowflake fa-8x");
+				return sendClassName("fa-solid fa-snowflake fa-8x");
 			}
 
 			if (icon.cloudSunRain) {
-				sendClassName("fa-solid fa-cloud-sun-rain fa-8x");
+				return sendClassName("fa-solid fa-cloud-sun-rain fa-8x");
 			}
 
 			if (icon.cloudShowersHeavy) {
-				sendClassName("fa-solid fa-cloud-showers-heavy fa-8x");
+				return sendClassName("fa-solid fa-cloud-showers-heavy fa-8x");
 			}
 
 			if (icon.cloudBolt) {
-				sendClassName("fa-solid fa-cloud-bolt fa-8x");
+				return sendClassName("fa-solid fa-cloud-bolt fa-8x");
 			}
 		};
 		const getWeather = () => {
@@ -85,4 +83,4 @@ const checkingAPIerror = () => {
 
 checkingAPIerror();
 
-export * from './weather_api.js'
+export * from "./weather_api.js";

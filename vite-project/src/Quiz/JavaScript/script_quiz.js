@@ -1,10 +1,7 @@
 import { selectQuestion } from "../../Menu/JavaScript/select_quiz.js";
 
 const body = document.querySelector("body");
-const hiddenBeforeClickStart = document.querySelector(
-	".hidden-before-click-start"
-);
-const panelBeforeQuiz = document.querySelector(".panel-before-quiz");
+const hiddenAfterEndQuiz = document.querySelectorAll(".hidden-after-end-quiz");
 
 const question = document.querySelector(".question p");
 const firstOption = document.querySelector(".first-option");
@@ -13,11 +10,10 @@ const thirdOption = document.querySelector(".three-option");
 const fourthOption = document.querySelector(".fourth-option");
 
 const nextBtn = document.querySelector(".next-btn");
-const startBtn = document.querySelector(".start");
 
 const score = document.querySelector(".score");
 const finalScore = document.querySelector(".final-score");
-const finalScoreBody = document.querySelector(".final-score-body");
+const finalScoreBox = document.querySelector(".final-score-box");
 
 const time = document.querySelector(".time");
 
@@ -119,8 +115,8 @@ const changeQuestion = () => {
 
 const result = () => {
 	if (askIndexes.length === objectQuestions.length) {
-		hiddenBeforeClickStart.style.display = "none";
-		finalScoreBody.style.display = "flex";
+		hiddenAfterEndQuiz.forEach(el => (el.style.visibility = "hidden"));
+		finalScoreBox.style.visibility = "visible";
 		finalScore.textContent = score.textContent = `Score : ${count}/${
 			objectQuestions.length
 		}, it is ${convertPointToPercentage()}`;
@@ -195,16 +191,10 @@ const convertPointToPercentage = () => {
 	return `${Math.floor(Percentage)}%`;
 };
 
-const start = () => {
-	panelBeforeQuiz.style.display = "none";
-	hiddenBeforeClickStart.style.display = "flex";
-	hiddenBeforeClickStart.style.transition = "all 2s";
-	showQuestion();
-	optionsAfterClick();
-	countTime();
-};
+showQuestion();
+optionsAfterClick();
+countTime();
 
-startBtn.addEventListener("click", start);
 nextBtn.addEventListener("click", nextQuestion);
 
 firstOption.addEventListener("click", () => {
@@ -220,4 +210,4 @@ fourthOption.addEventListener("click", () => {
 	allOptionAnswer(4);
 });
 
-export * from './script_quiz.js';
+export * from "./script_quiz.js";

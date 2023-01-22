@@ -3,10 +3,6 @@ import { RegEx } from "./RegEx.js";
 import { APIweather } from "./fetch_API_Weather.js";
 import { APIerrors } from "./APIErrors.js";
 
-const controlButton = document.querySelector(".control-button");
-const form = document.querySelector("form");
-const endForm = document.querySelector(".end-form");
-const endFormText = document.querySelector(".end-form-text");
 const styleInputInformation = document.querySelectorAll(
 	".style-input-information"
 );
@@ -34,6 +30,10 @@ const passwordSyntax = {};
 const comparingPasswordSyntax = {};
 const citySyntax = {};
 const emailSyntax = {};
+
+const sendToAnotherPage = () => {
+	return (location.href = "../../Menu/menu.html");
+};
 
 const createSyntax = (whatSyntax, id, error, iconCheck, iconX) => {
 	whatSyntax.valueInput = document.querySelector(id);
@@ -242,7 +242,6 @@ const upperCaseFirstLetter = word => {
 
 const sendNickName = () => {
 	const nickName = upperCaseFirstLetter(nameSyntax.valueInput.value);
-	endFormText.innerHTML = `Hello <b>${nickName}</b>, thanks for short form`;
 	setNick(nickName);
 };
 
@@ -270,15 +269,13 @@ const allInputIsCorrect = () => {
 		citySyntax.InputIsCorrect &&
 		emailSyntax.InputIsCorrect
 	) {
-		allGoodAnswerIcon.forEach(i => (i.style.opacity = -1));
-		controlButton.style.opacity = -1;
-		form.style.display = "none";
-		endForm.style.visibility = "visible";
 		sendNickName();
+		sendToAnotherPage();
 	}
 };
 
-const clearError = () => {
+const clearError = e => {
+	e.preventDefault();
 	allGoodAnswerIcon.forEach(icon => (icon.style.visibility = "hidden"));
 	allWrongAnswerIcon.forEach(icon => (icon.style.visibility = "hidden"));
 	allError.forEach(el => (el.style.visibility = "hidden"));
@@ -286,13 +283,6 @@ const clearError = () => {
 		el.value = "";
 		el.classList.remove("underline");
 	});
-};
-
-const animationGoNextBtn = () => {
-	goNextBtn.classList.add("animationAfterClickEnter");
-	setTimeout(() => {
-		goNextBtn.classList.remove("animationAfterClickEnter");
-	}, 500);
 };
 
 const checkFunctions = e => {
@@ -314,7 +304,6 @@ styleInputInformation.forEach(input =>
 	input.addEventListener("keypress", e => {
 		if (e.key === "Enter") {
 			checkFunctions(e);
-			animationGoNextBtn();
 		}
 	})
 );
