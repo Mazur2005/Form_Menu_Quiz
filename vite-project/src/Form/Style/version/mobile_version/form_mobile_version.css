@@ -1,0 +1,82 @@
+.form-box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+form {
+	padding-top: 10px;
+	width: 95%;
+}
+.form-box label {
+	font-size: 2rem;
+}
+.form-box input {
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: transparent;
+	height: 40px;
+	font-size: 1.6rem;
+	outline: none;
+	padding-left: 1%;
+}
+
+.form-box input::placeholder {
+	font-size: 1.6rem;
+}
+form input:focus {
+	background-color: rgba(107, 104, 104, 0.212);
+}
+
+.fa-check,
+.fa-x {
+	position: absolute;
+	right: 0;
+	font-size: 2rem;
+	visibility: hidden;
+}
+.fa-check {
+	color: rgb(33, 145, 67);
+	top: 50%;
+}
+
+.fa-x {
+	color: rgba(255, 0, 0, 0.8);
+	top: 38%;
+}
+
+.error-text {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	color: var(--color-error-text);
+	font-family: var(--error-style-text);
+	font-weight: 600;
+	visibility: hidden;
+}
+
+.control-button {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.buttons {
+	padding: 10px 20px;
+	border-radius: 10px;
+	background-color: rgb(228, 216, 216);
+	border: 1px solid black;
+	cursor: pointer;
+	transition: background 0.3s;
+	font-size: 1.5rem;
+	outline: none;
+}
+
+.buttons:hover,
+.buttons:focus {
+	text-decoration: underline;
+	background-color: rgba(0, 0, 0, 0.089);
+}
+.clear-form-btn {
+	margin-right: 20px;
+}
