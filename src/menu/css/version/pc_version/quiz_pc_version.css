@@ -1,0 +1,39 @@
+.all-quiz {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.quiz-JS,
+.quiz-HTML,
+.quiz-CSS {
+	text-align: center;
+}
+
+.all-quiz p {
+	letter-spacing: 2px;
+	font-weight: bold;
+	margin-top: 40px;
+	font-size: 4rem;
+}
+
+.quiz-JS button,
+.quiz-HTML button,
+.quiz-CSS button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: color 0.5s;
+	font-size: 1.6rem;
+}
+
+.quiz-JS button:hover,
+.quiz-HTML button:hover,
+.quiz-CSS button:hover,
+.quiz-JS button:focus,
+.quiz-HTML button:focus,
+.quiz-CSS button:focus {
+	color: #646a6d;
+}

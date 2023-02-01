@@ -1,0 +1,9 @@
+body {
+	background: var(--backGround-main);
+	font-family: var(--main-font);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
