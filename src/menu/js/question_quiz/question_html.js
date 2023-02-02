@@ -82,12 +82,12 @@ export const objectQuestionsHtml = [
 		],
 	},
 	{
-		question: "What is the correct HTML for making a drop-down list?",
+		question: "What is the correct HTML element for inserting a line break?",
 		answer: [
-			{ text: "<list>" },
-			{ text: '<input type="list">' },
-			{ text: '<input type="dropdown">' },
-			{ text: "<select>", correct: true },
+			{ text: "<br>", correct: true },
+			{ text: "<lb>" },
+			{ text: "<break>" },
+			{ text: "<next-line>" },
 		],
 	},
 ];

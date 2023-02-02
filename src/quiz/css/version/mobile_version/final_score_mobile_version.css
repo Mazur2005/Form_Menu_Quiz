@@ -35,7 +35,6 @@
 	margin: 5px;
 }
 
-.last-optionBtn:hover,
-.last-optionBtn:focus {
+.last-optionBtn:hover {
 	background-color: rgba(216, 154, 194, 0.775);
 }

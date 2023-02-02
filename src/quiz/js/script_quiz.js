@@ -47,8 +47,10 @@ const getThirdIndexIsEqualToFirstAndSecundIndex = () => {
 };
 const getFourthIndexIsEqualToFirstAndSecundAndThirdIndex = () => {
 	return (
-		answersIndexes[INDEX_FIRST_ANSWER] === answersIndexes[INDEX_FOURTH_ANSWER] ||
-		answersIndexes[INDEX_SECUND_ANSWER] === answersIndexes[INDEX_FOURTH_ANSWER] ||
+		answersIndexes[INDEX_FIRST_ANSWER] ===
+			answersIndexes[INDEX_FOURTH_ANSWER] ||
+		answersIndexes[INDEX_SECUND_ANSWER] ===
+			answersIndexes[INDEX_FOURTH_ANSWER] ||
 		answersIndexes[INDEX_THIRD_ANSWER] === answersIndexes[INDEX_FOURTH_ANSWER]
 	);
 };
@@ -192,36 +194,46 @@ const continueOrEndQuiz = () => {
 	getDoneAllQuiz() ? result() : delayAfterClickAnswer();
 };
 
+const removeFocus = input => {
+	input.blur();
+};
+
 const allOptionsAnswers = numberOfIndex => {
 	pushedAskedQuestion();
 
 	if (objectAnswer[answersIndexes[numberOfIndex]]?.correct) {
 		countScore();
 		getCorrectAnswerColor();
-		continueOrEndQuiz();
 	} else {
 		getWrongAnswerColor();
-		continueOrEndQuiz();
 	}
+	continueOrEndQuiz();
 };
 
 getQuestion();
 randomAnswers(objectAnswer);
 countTime();
 
-nextBtn.addEventListener("click", allOptionsAnswers);
+nextBtn.addEventListener("click", () => {
+	removeFocus(nextBtn);
+	allOptionsAnswers();
+});
 
 firstOption.addEventListener("click", () => {
 	allOptionsAnswers(INDEX_FIRST_ANSWER);
+	removeFocus(firstOption);
 });
 secondOption.addEventListener("click", () => {
 	allOptionsAnswers(INDEX_SECUND_ANSWER);
+	removeFocus(secondOption);
 });
 thirdOption.addEventListener("click", () => {
 	allOptionsAnswers(INDEX_THIRD_ANSWER);
+	removeFocus(thirdOption);
 });
 fourthOption.addEventListener("click", () => {
 	allOptionsAnswers(INDEX_FOURTH_ANSWER);
+	removeFocus(fourthOption);
 });
 
 export * from "./script_quiz.js";

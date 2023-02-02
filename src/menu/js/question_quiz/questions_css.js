@@ -21,7 +21,7 @@ export  const objectQuestionsCss = [
         question: 'Which HTML attribute is used to define inline styles?',
         answer: [
             {text: 'class',},
-            {text: 'style ', correct:true,},
+            {text: 'style', correct:true,},
             {text: 'styles',},
             {text: 'font', },
         ]
@@ -30,7 +30,7 @@ export  const objectQuestionsCss = [
         question: 'Which is the correct CSS syntax?',
         answer: [
             {text: '{body:color=black;}',},
-            {text: 'body {color: black;}  ', correct:true,},
+            {text: 'body {color: black;}', correct:true,},
             {text: 'body:color=black;',},
             {text: '{body;color:black;}',},
         ]
@@ -39,7 +39,7 @@ export  const objectQuestionsCss = [
         question: 'How do you insert a comment in a CSS file?',
         answer: [
             {text: '// this is a comment',},
-            {text: '/* this is a comment */  ', correct:true,},
+            {text: '/* this is a comment */', correct:true,},
             {text: '// this is a comment //',},
             {text: `'this is a comment`,},
         ]
