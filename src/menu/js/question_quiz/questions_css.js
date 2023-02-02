@@ -2,7 +2,7 @@ export  const objectQuestionsCss = [
     {
         question: 'What does CSS stand for?',
         answer: [
-            {text: 'Cascading Style Sheets xDDD', correct:true,},
+            {text: 'Cascading Style Sheets', correct:true,},
             {text: 'Colorful Style Sheets ',},
             {text: 'Computer Style Sheets',},
             {text: 'Creative Style Sheets',},
@@ -11,7 +11,7 @@ export  const objectQuestionsCss = [
     {
         question: 'What is the correct HTML for referring to an external style sheet?',
         answer: [
-            {text: '<link rel="stylesheet" type="text/css" href="mystyle.css xDDD"> ', correct:true,},
+            {text: '<link rel="stylesheet" type="text/css" href="mystyle.css">', correct:true,},
             {text: '<style src="mystyle.css">',},
             {text: '<stylesheet>mystyle.css</stylesheet>',},
             {text: 'does not exist',},
@@ -20,7 +20,7 @@ export  const objectQuestionsCss = [
     {
         question: 'Which HTML attribute is used to define inline styles?',
         answer: [
-            {text: 'class xDDD',},
+            {text: 'class',},
             {text: 'style ', correct:true,},
             {text: 'styles',},
             {text: 'font', },
@@ -29,7 +29,7 @@ export  const objectQuestionsCss = [
     {
         question: 'Which is the correct CSS syntax?',
         answer: [
-            {text: '{body:color=black;}  xDDD ',},
+            {text: '{body:color=black;}',},
             {text: 'body {color: black;}  ', correct:true,},
             {text: 'body:color=black;',},
             {text: '{body;color:black;}',},
@@ -38,7 +38,7 @@ export  const objectQuestionsCss = [
     {
         question: 'How do you insert a comment in a CSS file?',
         answer: [
-            {text: '// this is a comment xDDD',},
+            {text: '// this is a comment',},
             {text: '/* this is a comment */  ', correct:true,},
             {text: '// this is a comment //',},
             {text: `'this is a comment`,},
@@ -47,7 +47,7 @@ export  const objectQuestionsCss = [
     {
         question: 'Which CSS property controls the text size?',
         answer: [
-            {text: 'font-style xDDD',},
+            {text: 'font-style',},
             {text: 'text-size',},
             {text: 'text-style',},
             {text: 'font-size ', correct:true,},
@@ -56,7 +56,7 @@ export  const objectQuestionsCss = [
     {
         question: 'How do you display hyperlinks without an underline?',
         answer: [
-            {text: 'a {decoration:no-underline;}  xDDD',},
+            {text: 'a {decoration:no-underline;}',},
             {text: 'a {text-decoration:none;} ', correct:true,},
             {text: 'a {underline:none;}',},
             {text: 'a {text-decoration:no-underline;}',},
@@ -65,7 +65,7 @@ export  const objectQuestionsCss = [
     {
         question: 'How do you make each word in a text start with a capital letter?',
         answer: [
-            {text: 'text-style:capitalize xDDD',},
+            {text: 'text-style:capitalize',},
             {text: 'text-transform:capitalize', correct:true,},
             {text: `You can't do that with CSS`,},
             {text: 'transform:capitalize',},
@@ -74,7 +74,7 @@ export  const objectQuestionsCss = [
     {
         question: `How do you select an element with id 'demo'?`,
         answer: [
-            {text: '*demo xDDD' ,},
+            {text: '*demo' ,},
             {text: '#demo', correct:true,},
             {text: 'demo',},
             {text: '.demo',},
@@ -83,7 +83,7 @@ export  const objectQuestionsCss = [
     {
         question: `How do you select elements with class name 'test'?`,
         answer: [
-            {text: 'test xDDD',},
+            {text: 'test',},
             {text: '.test', correct:true,},
             {text: '#test',},
             {text: '*test',},
