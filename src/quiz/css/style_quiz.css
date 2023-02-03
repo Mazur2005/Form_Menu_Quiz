@@ -1,4 +1,0 @@
-@import "./version/mobile_version.css" (min-width: 320px) and (max-width: 540px);
-@import "./version/tablet_version.css" (min-width: 540px) and
-	(max-width: 1100px);
-@import "./version/pc_version.css" (min-width: 1100px);
