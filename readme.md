@@ -68,8 +68,8 @@ This project has three steps:
   - **Path**. [Form_Menu_Quiz\src\menu\js\weather_API.js](https://github.com/Mazur2005/Form_Menu_Quiz/blob/main/src/menu/js/weather_API.js).
 
    <br /> 
-   
-   - Welcoming user using his nickname and show rules from quiz.
+  
+- Welcoming user using his nickname and show rules from quiz.
 
    <br /> 
 
