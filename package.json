@@ -11,5 +11,8 @@
 	"devDependencies": {
 		"@types/node": "^18.11.18",
 		"vite": "^4.0.0"
+	},
+	"dependencies": {
+		"simple-icons": "^8.4.0"
 	}
 }

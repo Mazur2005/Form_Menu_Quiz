@@ -1,5 +1,7 @@
 # From_Menu_Quiz
 
+[![npm  - v8.19.2](https://img.shields.io/badge/npm_-v8.19.2-2ea44f?logo=npm)](https://www.npmjs.com/package/npm/v/8.19.2) [![vite - v4.1.1](https://img.shields.io/badge/vite-v4.1.1-2ea44f?logo=vite&logoColor=yellow)](https://www.npmjs.com/package/npm/v/8.19.2) [![java script - ES6](https://img.shields.io/badge/java_script-ES6-2ea44f?logo=javaScript)](https://www.npmjs.com/package/npm/v/8.19.2)
+
 In this project, I focused on writing good code, not on design.
 <br/>
 This project has three steps:
@@ -14,12 +16,6 @@ This project has three steps:
 # GitHub page
 
 ## [Anchor to view page](https://mazur2005.github.io/Form_Menu_Quiz/)
-
- <br /> 
- <br />
-
-# What technology was used.
-
 
  <br /> 
  <br />
@@ -53,43 +49,48 @@ This project has three steps:
 
 ## Menu
 
-- Data: 
-    - name of day. 
-    - hour. 
-    - dd/mm/yyyy.
+- Data:
+
+  - name of day.
+  - hour.
+  - dd/mm/yyyy.
 
    <br/> 
-   
-- API: 
-    - Name city 
-    - The icon displays the current weather. 
-    - Weather. 
-    - Temperature. 
-    - Pressure. 
-    - **Path**. [Form_Menu_Quiz\src\menu\js\weather_API.js](https://github.com/Mazur2005/Form_Menu_Quiz/blob/main/src/menu/js/weather_API.js).
+
+
+- API:
+
+  - Name city
+  - The icon displays the current weather.
+  - Weather.
+  - Temperature.
+  - Pressure.
+  - **Path**. [Form_Menu_Quiz\src\menu\js\weather_API.js](https://github.com/Mazur2005/Form_Menu_Quiz/blob/main/src/menu/js/weather_API.js).
 
    <br /> 
    
    - Welcoming user using his nickname and show rules from quiz.
 
    <br /> 
-   
+
+
 - Three options quiz:
-    - HTML
-    - CSS
-    - JS
+
+  - HTML
+  - CSS
+  - JS
 
     <br/>
 
-- Code will verify your choice and will be remember on cookie. 
-- You can use as many question as you what, but every question has to has four answers. The default quantity is ten. 
-    - **Path**. [Form_Menu_Quiz\src\menu\js\question_quiz](https://github.com/Mazur2005/Form_Menu_Quiz/tree/main/src/menu/js/question_quiz)
-   
+- Code will verify your choice and will be remember on cookie.
+- You can use as many question as you what, but every question has to has four answers. The default quantity is ten.
+  - **Path**. [Form_Menu_Quiz\src\menu\js\question_quiz](https://github.com/Mazur2005/Form_Menu_Quiz/tree/main/src/menu/js/question_quiz)
    <br />
 
 ## Quiz
 
 1. User has only one try to found a good answer. When user selected answer, background color will be changed for 0.2 seconds, for another color depends on answer:
+
    - Good --- blue
    - Bad --- red
 
@@ -100,6 +101,7 @@ This project has three steps:
    <br />
 
 3. For the last, user will see a result quiz, points and percentage. The user will have 2 options:
+
    - return --- it means return to the menu.
    - repeat --- it means to repeat this quiz again.
 
@@ -170,6 +172,7 @@ If you have any feedback, please reach out to me at mazurarkadiusz2005@gmail.com
 <br />
 
 # Authors
+
 - [Project](https://github.com/Mazur2005)
 - [Icon-vite](https://codepen.io/davideast/pen/yLELbvm)
 - [Icons](https://www.nicepng.com/ourpic/u2q8w7a9w7r5r5q8_html-css-icon-png/)
