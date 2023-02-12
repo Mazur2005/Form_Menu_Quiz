@@ -38,7 +38,7 @@ This project has three steps:
 ## Form
 
 1. Has validation using [RegEx.](https://github.com/Mazur2005/Form_Menu_Quiz/blob/main/src/form/js/RegEx.js)
-2. Nick name and city will set and remember in cookie.
+2. Nick name and city will be set and remember in cookie.
 3. Weather API sending a question with the city selected by the user.
 
    - In this part, JS checks the response.
@@ -60,7 +60,7 @@ This project has three steps:
 
 - API:
 
-  - Name city
+  - City name.
   - The icon displays the current weather.
   - Weather.
   - Temperature.
