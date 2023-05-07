@@ -147,19 +147,19 @@ In this project It have been used compiler Vite
 After you've installed node, you should be able to use the program. The simplest use case would be run local server:
 
 ```bash
-  $ git run dev
+  $ npm run dev
 ```
 
 You don't have to build project with Vite because this process is done, but if you want fork this project remember to run build to update yours changes.
 
 ```bash
-  $ git run build
+  $ npm run build
 ```
 
 Or you can open live server and build project in the same time.
 
 ```bash
-  $ git run preview
+  $ npm run preview
 ```
 
  <br /> 
